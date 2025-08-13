@@ -1,0 +1,121 @@
+ body {
+     margin: 0;
+     font-family: "Shippori Antique", sans-serif;
+     background: url("/img/bg.webp") no-repeat center center fixed;
+     background-size: cover;
+     color: white;
+     text-align: center;
+ }
+
+ #bodyblur {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.6);
+     opacity: 0;
+     visibility: hidden;
+     transition: all 0.5s;
+ }
+
+ .image img {
+     border-radius: 50%;
+     border: 3px solid white;
+     animation: rotateZoom 15s infinite linear;
+     margin-top: 30px;
+ }
+
+ @keyframes rotateZoom {
+     0% {
+         transform: rotate(0deg) scale(1);
+     }
+
+     50% {
+         transform: rotate(180deg) scale(1.1);
+     }
+
+     100% {
+         transform: rotate(360deg) scale(1);
+     }
+ }
+
+ .catatan {
+     margin: 20px auto;
+     overflow: hidden;
+     white-space: nowrap;
+     width: 80%;
+     position: relative;
+ }
+
+ .running-text {
+     display: inline-block;
+     padding-left: 100%;
+     animation: scrollText 15s linear infinite;
+ }
+
+ @keyframes scrollText {
+     0% {
+         transform: translateX(0%);
+     }
+
+     100% {
+         transform: translateX(-100%);
+     }
+ }
+
+ #tombWA {
+     margin-top: 20px;
+     visibility: hidden;
+     opacity: 0;
+     transition: all 0.5s;
+ }
+
+ .button {
+     display: inline-block;
+     background: #ff4081;
+     color: white;
+     padding: 10px 20px;
+     border-radius: 25px;
+     text-decoration: none;
+     font-weight: bold;
+     cursor: pointer;
+     transition: 0.3s;
+     position: relative;
+     z-index: 9999;
+ }
+
+ .button:hover {
+     background: #e91e63;
+ }
+
+ .fas.fa-heart {
+     position: fixed;
+     top: -10px;
+     color: red;
+     animation: fall linear;
+     z-index: 999;
+ }
+ .btn-biru {
+  background-color: #007bff !important;
+  color: white !important;
+  border-radius: 50px !important; /* full rounded */
+  padding: 10px 20px !important;
+  border: none !important;
+}
+
+.btn-merah {
+  background-color: #dc3545 !important; /* merah */
+  color: white !important;
+  border-radius: 50px !important; /* full rounded */
+  padding: 10px 20px !important;
+  border: none !important;
+}
+
+
+ @keyframes fall {
+     to {
+         transform: translateY(100vh);
+         opacity: 0;
+     }
+ }
